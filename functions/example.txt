@@ -1,0 +1,53 @@
+Ex-1
+#echo "floor(10.9)" | terraform console
+10
+#echo 'title("user-generated password file)' | terraform console
+"User-Generated Password File"
+#Which type of variable does the function lookup working with?
+
+ex-2
+This variable contains the developers' names for project-sonic with the names separated by a :.
+Using this variable and the count meta-argument, create IAM users for all developers. Write the resource block and name it as a cloud in the main.tf file.
+
+
+Convert this variable from a string to a list.
+Do not change the variable defined in variables.tf.
+
+
+ex-3
+What is the name of the IAM User that is created at the Index 6, of the IAM User at address aws_iam_user.cloud ?
+
+#echo 'aws_iam_user.cloud[6].name' | terraform console
+
+ex-4
+Locate the index of the element called oni in the variable called sf
+
+Use terraform console and check index(var.sf,"oni") OR to use a one liner:
+#echo "index(var.sf,\"oni\")" | terraform console
+
+
+ex-5
+We have now, updated the s3.tf in this configuration directory and added a new resource block to create a S3 bucket called sonic-media.
+
+Create an additional resource called upload_sonic_media to upload the files listed in the variable called media to this bucket.
+
+Use the following specifications:
+
+Use the for_each meta-argument to upload all the elements of the media variable.
+bucket: Use reference expression to the bucket sonic-media.
+source: Each element in the variable called media.
+key: Should be the name of the files being uploaded (minus the /root). For an example, eggman.jpg, shadow.jpg e.t.c.
+
+
+ex-6
+Create an EC2 Instance with the resource name mario_servers.
+
+Use the following specifications:
+
+AMI: Use variable called ami.
+
+
+Tags: Create a tag with key Name and value set to the variable called name.
+
+
+Instance_type: Use a conditional expression so that - If the instance is created with a tag Name = "tiny", it should use the variable called small else the variable called large

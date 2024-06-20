@@ -1,0 +1,25 @@
+Q.
+create a file called iam-user.tf with the following specifications:
+
+
+Resource Type: aws_iam_user
+
+Resource Name: users
+
+Name: mary
+
+
+Q.
+Add a new file called provider.tf containing a provider block for aws.
+Inside this block add a single argument called region with the value 
+
+
+Q.
+However, project_sapphire has 5 more people who need access to the AWS Account!
+
+Let's use the count meta-argument and the new variables.tf file created in the configuration directory to create these additional users!
+
+Q.
+Now, update the iam-user-sapphire.tf to make use of the count meta-argument to loop through the project-sapphire-users variable and create all the users in the list.
+
+

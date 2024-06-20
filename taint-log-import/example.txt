@@ -1,0 +1,11 @@
+Suppose terraform script failed in middle in that case when terraform plan will show error so avoid this type of
+issue terraform taint will help to solve the issue.
+
+Example: Suppose through terraform file I am provisioning EC2 instance and running some remote exec command
+ec2 has provisioned but remote exec failed in the middle in that case no need to destroy the ec2 and re-create
+terraform taint will mark as completed for ec2 and when re-run the terraform apply then in that case
+only terraform remote exec will execute.
+
+#terraform taint aws_instance.webserver
+#terraform plan
+#terraform untaint aws_instance.webserver

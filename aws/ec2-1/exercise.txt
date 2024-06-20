@@ -1,0 +1,50 @@
+===============exercise -1 ===================
+Using this configuration file write a resource block to provision a simple EC2 instance with the following specifications:
+
+
+Resource Name: cerberus
+
+AMI: ami-06178cf087598769c, use variable named ami
+
+region: eu-west-2, use variable named region
+
+Instance Type: m5.large, use variable named instance_type
+
+
+===============exercise -2 ===================
+
+A new SSH key pair has been created in the directory /root/terraform-projects/project-cerberus/.ssh.
+
+The private key is called cerberus and the public key is called cerberus.pub
+
+
+Using the public key, create a new key-pair in AWS with the following specifications:
+
+Resource Name: cerberus-key
+
+key_name: cerberus
+
+Use the file functions to read the public key cerberus.pub
+
+
+When ready, run a terrafom plan and apply to create this key pair.
+
+===============exercise -3 ===================
+Let us now configure the cerberus resource to make use of this key. Update the resource block to make use of the key called cerberus
+
+
+===============exercise -4 ===================
+
+Let us now install nginx with EC2 instance. To do this, let's make use of the user_data argument.
+
+Using the file function again or by making use of the heredoc syntax, use the script called install-nginx.sh as the value for the user_data argument.
+
+
+
+===============exercise -5 ===================
+Create an Elastic IP resource with the following specifications:
+
+Resource Name: eip
+vpc: true
+instance: id of the EC2 instance created for resource cerberus (use a reference expression)
+create a local-exec provisioner for the eip resource and use it to print the attribute called public_dns to a file /root/cerberus_public_dns.txt on the iac-server.

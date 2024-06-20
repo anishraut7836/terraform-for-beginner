@@ -1,0 +1,23 @@
+
+#terraform workspace list (existing workspaces)
+#terraform workspace select default (switch to workspace)
+ex-1
+Create three new workspaces called us-payroll, uk-payroll and india-payroll.
+
+#terraform workspace new us-payroll
+
+#terraform workspace new uk-payroll
+
+#terraform workspace new india-payroll
+
+ex-2
+apply the terraform on all workspace
+
+Run: 
+#terraform workspace select us-payroll; terraform apply
+
+then
+#terraform workspace select uk-payroll; terraform apply
+
+and finally 
+#terraform workspace select india-payroll; terraform apply

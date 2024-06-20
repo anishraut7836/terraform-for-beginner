@@ -1,0 +1,22 @@
+#terraform state show aws_s3_bucket.finance
+#support sub command
+terraform list
+terraform mv
+terraform pull
+terraform rm
+terraform show
+
+#terraform state list
+#terraform state list aws_s3_bucket.finance-2020922
+##we can't make the manual changes in state file so terraform state mv command help to rename the name
+##after that manually update the main.tf file
+#terraform state mv aws_dynamodb_table.state-locking aws_dynamodb_table.state-locking-db 
+
+#pull the state file from remote to local
+#terraform state pull 
+#terraform state pull | jq '.resource[] | select(.name == "state-locking-db")|.instances[].attributes.hash_key'
+
+#if don't want to manage the resource through terraform then remove it from state file
+#terraform state rm (resource name)
+#terraform state rm aws_s3_bucket.finance-2020922
+#

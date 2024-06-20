@@ -1,0 +1,3 @@
+create a new S3 with the following specifications:
+resource name: dc_bucket
+bucket name: dc-is-better-than-marvel

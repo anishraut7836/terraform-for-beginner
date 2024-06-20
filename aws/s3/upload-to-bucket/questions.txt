@@ -1,0 +1,11 @@
+Q.
+We have a file called woody.jpg stored at /root that has to be uploaded to a bucket called pixar-studios-2020.
+This bucket already exists though and was created using the AWS CLI
+
+Let's do that now and upload this image to the s3 bucket! Update the main.tf file with the following specifications:
+
+Bucket: pixar-studios-2020
+Key: woody.jpg
+Source: /root/woody.jpg
+Use object (resource) Name: upload
+

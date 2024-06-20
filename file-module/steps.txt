@@ -1,0 +1,116 @@
+#terraform init
+#terraform plan
+#terraform apply
+#terraform destroy
+
+
+Q.
+Create a new configuration file called pet-name.tf.
+This file should make use of the local_file and random_pet resource type with the below requirements:
+
+local_file resource details:
+
+Resource name = "my-pet"
+
+File name = "/root/pet-name"
+
+Content = "My pet is called finnegan!!"
+
+
+random_pet resource details:
+
+Resource name = "other-pet"
+
+Length = "1"
+
+Prefix = "Mr"
+
+Separator = "."
+
+Ans.
+refere the file terraform\file-module\pet-name.tf
+
+
+Q.
+Create a configuration file called code.tf.
+
+Using the local_file resource type, write the resource block with the below requirements into the file:
+
+Resource name = iac_code
+
+File name = /opt/practice
+
+Content = Setting up infrastructure as code
+
+Ans.
+refere the file terraform\file-module\code.tf
+
+
+###variable block
+type    example
+string  "/root/pets.txt"
+number  1
+bool    true/false
+any     default value
+list    ["cat", "dog"]
+map     pet1 = cat
+        pet2 = dog
+object  complex data structure
+tuple   complex data structure
+
+
+Q.
+update the time.tf file and add a new local_file resource called time with the following requirements:
+
+filename: /root/time.txt
+content: Time stamp of this file is <id from time_update resource>
+
+Ans.
+Refere the fike   file-module\time.tf
+
+
+
+Q.
+Within this directory, create two local_file type resources in depend-on.tf file.
+
+
+Resource 1:
+
+Resource Name: whale
+
+File Name: /root/whale
+
+content: whale
+
+
+Resource 2:
+
+Resource Name: krill
+
+File Name: /root/krill
+
+content: krill
+
+
+Resource called whale should depend on krill but do not use reference expressions.
+
+Q. terraform commands
+
+#terraform validate (validat the syntax)
+#terraform fmt ( formatting the file)
+#terraform show (current state )
+#terraform show -json (show the state file as json format)
+#terraform provider ( show the all provider details)
+#terraform providers mirror /root/terraform/new-file  (create the provider copy)
+#terraform output ( show all output)
+#terraform output pet-name ( specific resource output)
+#terraform refresh ( refresh the state file)
+#terraform plan
+#terraform apply
+#terraform graph ( show the dependecies )
+##on ubuntu install the graph app and visualize the graph 
+#apt install graphviz -y
+#terraform graph | dot -Tsvg > graph.svg
+
+
+

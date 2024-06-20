@@ -1,0 +1,8 @@
+https://min.io/docs/minio/linux/operations/manage-existing-deployments.html
+
+https://github.com/minio/minio
+
+Similar to S3 bucket.
+
+Minio provides an S3-compatible API and allows us to configure the s3 backend in the same way as the actual S3 service in AWS Cloud.
+

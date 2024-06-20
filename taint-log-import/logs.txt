@@ -1,0 +1,12 @@
+export TF_LOG_PATH=/tmp/terraform.log 
+head -10 /tmp/terraform.log
+unset TF_LOG_PATH
+
+Exe-1
+
+Enable logging with the log level set to ERROR and then export the logs the path /tmp/ProjectA.log.
+
+Solution:
+
+Run: export TF_LOG=ERROR and export TF_LOG_PATH=/tmp/ProjectA.log
+

@@ -1,0 +1,48 @@
+Process to import existing resource in terraform
+
+1. create the resource manually in main.tf file
+2. run the terraform import command
+3. manually update the main.tf file
+4. run the terraform plan
+
+Support I have to import the ec2 instance
+#terraform import aws_instance.webserver-2 i-026e1be10d5326f7
+but this will give the error so before running above command
+I have to create the resource block in terraform file
+
+resource "aws_instance" "webserver-2" {
+
+}
+
+keep the file empty and again run the terraform import command
+#terraform import aws_instance.webserver-2 i-026e1be10d5326f7
+
+Now update the manually resource block
+resource "aws_instance" "webserver-2" {
+    ami = "ami-dgd923610c"
+    instance_type = "t2.micro"
+    key_name = "ws"
+    vpc-security_group_ids = ["sg-e83864662"]
+
+}
+
+take the details from AWS console or state file
+
+#terraform plan
+
+
+
+Ex-2
+Using the AWS CLI inspect this EC2 instance and find the ID that is created by it.
+
+Here are some of the specifications of this EC2 Instance:
+
+AMI: ami-082b3eca746b12a89
+
+Instance Type: t2.large
+
+Key Name: jade
+
+Solution
+
+aws ec2 describe-instances --endpoint http://aws:4566  --filters "Name=image-id,Values=ami-082b3eca746b12a89" | jq -r '.Reservations[].Instances[].InstanceId'
