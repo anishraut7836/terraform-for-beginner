@@ -1,0 +1,9 @@
+#export AWS_ACCESS_KEY_ID="<YOUR ACCESS KEY>"
+#export AWS_SECRET_ACCESS_KEY="<YOUR SECRET KEY>"
+#terraform init
+#terraform plan
+#terraform apply -auto-approve
+#terraform show
+#terraform state list
+#terraform destroy -auto-approve
+

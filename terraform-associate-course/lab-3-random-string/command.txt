@@ -1,0 +1,8 @@
+#terraform init
+#terraform plan
+#terraform plan -out myplan
+#terraform apply myplan
+#terraform show
+#terraform state list
+#terraform destroy -auto-approve
+
