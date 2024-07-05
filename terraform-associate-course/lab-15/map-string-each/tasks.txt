@@ -1,0 +1,2 @@
+create subnet cidr range based on the map value and each subnet
+Iterate over a map to create multiple resources

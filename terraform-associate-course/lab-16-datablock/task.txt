@@ -1,0 +1,8 @@
+Query existing resources using a data block
+we're going to query data that already exists in AWS, and not a resource that was created by Terraform itself.
+Export attributes from a data lookup
+#export AWS_ACCESS_KEY_ID="<YOUR ACCESS KEY>"
+#export AWS_SECRET_ACCESS_KEY="<YOUR SECRET KEY>"
+#terraform init
+#terraform plan
+#terraform apply -auto-approve

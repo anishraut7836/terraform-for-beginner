@@ -1,0 +1,1 @@
+Create subnet based on the avilabilty zone in the list

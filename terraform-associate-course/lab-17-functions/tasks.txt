@@ -1,0 +1,3 @@
+Task 1: Use basic numerical functions to select data
+Task 2: Manipulate strings using Terraform functions
+Task 3: View the use of cidrsubnet function to create subnets
